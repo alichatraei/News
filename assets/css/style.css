@@ -10,9 +10,7 @@
 }
 /* Header  */
 header {
-  background: url("../images/pexels-christian-heitz-842711.jpg") center
-    no-repeat fixed;
-  background-size: cover;
+  background-color: #393e46;
   height: 450px;
   box-shadow: 0.1rem 0.1rem 1rem #4a2d46;
 }
@@ -23,11 +21,7 @@ header {
 #searchBoxRow {
   height: 100%;
 }
-.form-group {
-  backdrop-filter: blur(1rem);
-  padding: 1rem 1rem;
-  border-radius: 1rem;
-}
+
 /* footer */
 footer {
   width: 100%;
@@ -36,8 +30,8 @@ footer {
   position: fixed;
   text-align: center;
 }
-/* @media (min-height: 80px) {
+/* @media (min-height: 10px) {
   footer {
     position: relative;
   }
-} ; */
+} */
