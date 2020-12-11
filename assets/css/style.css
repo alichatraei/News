@@ -1,0 +1,43 @@
+/* Font */
+@font-face {
+  font-family: "iransans";
+  src: url("../fonts/IRANSans-web.woff");
+}
+* {
+  direction: rtl;
+  font-family: "iransans";
+  /* height: 1500px; */
+}
+/* Header  */
+header {
+  background: url("../images/pexels-christian-heitz-842711.jpg") center
+    no-repeat fixed;
+  background-size: cover;
+  height: 450px;
+  box-shadow: 0.1rem 0.1rem 1rem #4a2d46;
+}
+/* Search Box container */
+#searchbox {
+  height: 100%;
+}
+#searchBoxRow {
+  height: 100%;
+}
+.form-group {
+  backdrop-filter: blur(1rem);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+}
+/* footer */
+footer {
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  text-align: center;
+}
+/* @media (min-height: 80px) {
+  footer {
+    position: relative;
+  }
+} ; */

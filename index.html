@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اخبار</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-light">
+    <!-- header -->
+    <header>
+      <nav class="container text-white" id="searchbox">
+        <nav class="row" id="searchBoxRow">
+          <div class="form-group text-right col-md col-sm-3 my-auto">
+            <label for="query">راجب چی میخای بدونی ؟</label>
+            <input type="text" class="form-control" id="query" />
+          </div>
+          <div class="form-group text-right col-md col-sm-3 my-auto">
+            <label for="country">تو چه کشوری ؟</label>
+            <select type="text" class="form-control" id="country">
+              <option value="unknown" selected>انتخاب کنید</option>
+              <option value="us">امریکا</option>
+              <option value="ca">کانادا</option>
+              <option value="es">اسپانیا</option>
+              <option value="ru">روسیه</option>
+            </select>
+          </div>
+          <div class="form-group text-right col-md col-sm-3 my-auto">
+            <label for="category">تو کدوم دسته بندی ؟</label>
+            <select type="text" class="form-control" id="category">
+              <option value="unknown">انتخاب کنید</option>
+              <option value="health">سلامت</option>
+              <option value="entertainment">سرگرمی</option>
+              <option value="sports">ورزش</option>
+            </select>
+          </div>
+          <div class="form-group text-right col-md col-sm-3 my-auto">
+            <button class="btn btn-primary btn-block" id="submit">
+              جست و جو
+            </button>
+          </div>
+        </nav>
+      </nav>
+    </header>
+    <!-- main -->
+    <main class="container"></main>
+    <!-- footer -->
+    <footer>
+      <p class="text-muted">تمامی حقوق محفوظ است &copy;</p>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
