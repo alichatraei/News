@@ -1,9 +1,11 @@
 class FetchData {
   constructor() {
     this.APIKey = "f3f2793e00d748f0b065b381a4a83158";
+    this.news = [];
   }
 
-  fetchDate(query, country, category) {
+  async fetchDate(query, country, category) {
+    //write URL link
     let url = "https://newsapi.org/v2/";
     if (query !== "" && country === "unknown" && category === "unknown") {
       url += "everything?q=" + query + "&apiKey=" + this.APIKey;
@@ -23,6 +25,8 @@ class FetchData {
           "&apiKey=" +
           this.APIKey;
     }
-    console.log(url);
+    //fetch Api
+    let apiLink = await fetch(url);
+    return await apiLink.json();
   }
 }
