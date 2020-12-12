@@ -10,7 +10,7 @@ class Ui extends FetchData {
       p.remove();
     }, 3000);
   }
-
+  //validate Form
   validateForm(query, country, category) {
     if (query == "" && country == "unknown" && category == "unknown") {
       this.showErrors(
@@ -31,6 +31,7 @@ class Ui extends FetchData {
         console.log(data);
         //create card elements and show news in there
         let mainElement = document.querySelector("main .row");
+        //show News
         mainElement.innerHTML += `
         <div class="card col-md-3 text-right m-3"> 
             <img class="card-img-top pt-3" src="${data.urlToImage}"></img>
@@ -38,9 +39,10 @@ class Ui extends FetchData {
               <h5 class="card-title">${data.title.split("-", 1)}</h5>
               <hr/>
               <p class="card-text">${data.description}</p>
-              <p class="badge badge-primary badge-pill"> نویسنده : ${
-                data.author
-              }</p>
+              <p class="badge badge-primary badge-pill"> نویسنده : ${data.author.split(
+                ",",
+                1
+              )}</p>
             </div>
           </div>
         `;

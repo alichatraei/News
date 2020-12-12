@@ -12,7 +12,9 @@ function eventListener() {
     // Validate Inputs
     let query = document.querySelector("#query").value,
       country = document.querySelector("#country").value,
-      category = document.querySelector("#category").value;
+      category = document.querySelector("#category").value,
+      mainElement = document.querySelector("main .row");
+    if (mainElement.innerHTML !== "") mainElement.innerHTML = "";
     ui.validateForm(query, country, category);
   });
 }
