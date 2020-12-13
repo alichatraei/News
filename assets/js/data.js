@@ -1,7 +1,6 @@
 class FetchData {
   constructor() {
     this.APIKey = "f3f2793e00d748f0b065b381a4a83158";
-    this.news = [];
   }
 
   async fetchDate(query, country, category) {
@@ -26,7 +25,7 @@ class FetchData {
           this.APIKey;
     }
     //fetch Api
-    let apiLink = await fetch(url);
+    let apiLink = await fetch(url).catch(() => {});
     return await apiLink.json();
   }
 }

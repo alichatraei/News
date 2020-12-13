@@ -26,19 +26,19 @@ class Ui extends FetchData {
 
   showNews(news) {
     //get data and process it
-    news.then((value) => {
-      console.log(value);
-      if (value.articles.length === 0)
-        this.showErrors(
-          "خبری مطابق با جست و جوی شما یافت نشد",
-          "alert alert-danger text-center"
-        );
-      else {
-        value.articles.forEach((data) => {
-          //create card elements and show news in there
-          let mainElement = document.querySelector("main .row");
-          //show News
-          mainElement.innerHTML += `
+    news
+      .then((value) => {
+        if (value.articles.length === 0)
+          this.showErrors(
+            "خبری مطابق با جست و جوی شما یافت نشد",
+            "alert alert-danger text-center"
+          );
+        else {
+          value.articles.forEach((data) => {
+            //create card elements and show news in there
+            let mainElement = document.querySelector("main .row");
+            //show News
+            mainElement.innerHTML += `
         <div class="card col-md-3 text-right m-3"> 
             <img class="card-img-top pt-3" src="${data.urlToImage}"></img>
             <div class="card-body">
@@ -53,8 +53,11 @@ class Ui extends FetchData {
             </div>
           </div>
         `;
-        });
-      }
-    });
+          });
+        }
+      })//show reject error
+      .catch(() => {
+        this.showErrors('خطای سرور','alert alert-danger text-center')
+      });
   }
 }
